@@ -2,21 +2,45 @@ body{
     background-color: #E8E8E8;
 }
 
-.logo{
-    width: 120px;
+div{
+    display: block;
+    min-height: 600px;
+    width: 100%;
+}
 
+.wrapper{
+    margin-top: 12px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 32px 16px;
+}
+
+.wrapper > div {
+    box-sizing: border-box;
+    width: calc(50% - 32px);
+    float: left;
+    margin: 0 16px;
+}
+
+
+.logo{
+    width: 240px;
+    float:inline-start;
+    border-radius: 5px;
 }
 
 
 .form{
     display: inline-block;
     padding: 20px;
-    margin: 15px;
+    
 
     border-color: #000000;
     border-width: 2px;
     border-style: solid;
     border-radius: 10px;
+    min-height: 450px;
+    width: 70%;
 
 }
 
@@ -40,6 +64,11 @@ button{
     size: 80%;
 }
 
+.mensaje{
+    width: 100%;
+    height: 80%;
+}
+
 .btnEncriptar{
     background-color: #0A3871;
     color: white;
@@ -51,7 +80,6 @@ button{
     width: 47%;
 }
 
-
 .rSideMenu{
     display: inline-block;
     padding: 20px;
@@ -61,6 +89,7 @@ button{
     border-width: 2px;
     border-style: solid;
     border-radius: 10px;
+    width: 30%;
 }
 
 .rSideMenu h2{
@@ -75,13 +104,30 @@ button{
     padding: 10px;
 }
 
+#id{
+    display: none;
+    visibility: hidden;
+}
+
 #btnCopiar{
     text-align: center;
     size: 480px;
 }
 
+.divImgNoEncontrada{
+    text-align: center;
+    width: 100%;
+}
+
 .imgNoEncontrado{
     width: 400px;
+    text-align: center;
+}
+
+#mensajeDesencriptado{
+    width: 100%;
+    padding-bottom: 80%;
+    margin-bottom: 20px;
 }
 
 footer{
