@@ -33,16 +33,21 @@ function moduloCifrado(frase){
 
     }
 
+    try {
+        document.getElementById("mensajeDefault").style.display = "none"; 
+        document.getElementById("divMensajeDesencriptado").style.display = "inline-block"; 
+    } catch (error) {
+        //console.log("Error: "+ error);   
+    }
+
+    let textAreaDesencriptado = document.getElementById("mensajeDesencriptado");
+    let test = document.getElementById("mensaje");
+    test.innerHTML = "";
+    textAreaDesencriptado.innerHTML = fraseConCambio;
+
     return fraseConCambio;
 }
 
-/*
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "a" es convertida para "ai"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat"
-*/
 
 function moduloDecifrado(frase){
 
@@ -73,7 +78,11 @@ function moduloDecifrado(frase){
         let textAreaDesencriptado = document.getElementById("mensajeDesencriptado");
         textAreaDesencriptado.innerHTML = frase;
 
+    }else{
+        document.getElementById("mensajeDefault").style.display = "inline-block";
+        document.getElementById("divMensajeDesencriptado").style.display = "none"; 
     }
+    
 
     return frase;
 }
@@ -87,8 +96,6 @@ function encriptar(){
 
     let textoCifrado = moduloCifrado(textoIngresado);
 
-    console.log("Texto en area:  "+ textoIngresado);
-    console.log("Texto procesado: " + textoCifrado);
 }
 
 function desencriptar(){
